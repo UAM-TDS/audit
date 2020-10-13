@@ -1,0 +1,9 @@
+{
+  "name": "Audit",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "f5be7a7f"
+}
