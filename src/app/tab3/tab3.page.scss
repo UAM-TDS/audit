@@ -1,9 +1,16 @@
+// ion-title{
+//     width: 50%;
+// } 
+
 .row{
-
+    color: whitesmoke;
     display: contents;
-
+    
 }
-  
+.row:hover{
+
+    color: #778899 ;
+}
 h6{
     margin-left: 4px;
     margin-top: 12px;
@@ -18,7 +25,7 @@ p{
 }
 
 .company-profile{
-    padding: 16px 16px;
+    padding: 16px 16px 0px 16px;
     color: #87cefa;
 
 }

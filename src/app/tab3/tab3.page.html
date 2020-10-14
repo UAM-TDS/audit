@@ -1,10 +1,17 @@
 <ion-header>
+  <ion-toolbar mode="ios">
+   
+    <ion-title >Perfil</ion-title>
+  </ion-toolbar>
   <ion-toolbar>
-
-    <ion-title class="ion-padding-start">Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-button class="row" mode="ios">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-buttons slot="end" >
-      <ion-menu-button class="row">
+      <ion-menu-button class="row" mode="ios">
           <ion-icon name="person-circle-outline"></ion-icon>
         <h6 >Jhon S.</h6>
       </ion-menu-button>
@@ -12,7 +19,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-menu contentId="menu-content" side="end" type="overlay">
+<ion-menu mode="ios" contentId="menu-content" side="end" type="overlay">
   <ion-header>
     <ion-toolbar>
       <ion-title>Auditor Profile</ion-title>
@@ -32,10 +39,10 @@
 </ion-menu>
 
 
-<ion-content >
+<ion-content mode="ios">
   <ion-router-outlet id="menu-content"></ion-router-outlet>
 
-  <ion-card mode="ios" class="company-profile" style="--padding-top:40px">
+  <ion-card mode="ios" class="company-profile">
   <ion-avatar class="profile-pic">
     <img class="logo" src="\assets\icon\audit.png" alt="Logo">
   </ion-avatar>
