@@ -1,3 +1,63 @@
+
+
+ion-content {
+    --background: #8594a3;
+    --color: #ffffff;
+    --keyboard-offset: 0px;
+    --offset-bottom: 0px;
+    --offset-top: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+
+}
+ion-card {
+    height: -webkit-fill-available;
+    --background: #8594a3;
+    --color: #000000;
+}
+
+.header{
+    font-size: 20px;
+}
+
+.logoDiv{
+    margin-top: 15px;
+    
+}
+.logoImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+}
+
+.content{
+    margin-top: 35px;
+}
+.input{
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+.button{
+    width: 288px;
+    margin-left: 0px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.footerText{
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    padding-bottom: 10px;
+}
+a{
+    color: #ffffff;
+}
+
 // ion-item{
 //     --background: #3880ff;
 //     --color: #fff;
@@ -19,14 +79,4 @@ ion-content {
     --padding-start: 0px;
     --padding-top: 0px;
 
-}
-ion-card {
-    
-
-    --background: #8594a3;
-    --color: #000000;
-}
-
-a{
-    color: #fff;
 }
