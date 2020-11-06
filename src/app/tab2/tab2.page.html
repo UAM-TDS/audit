@@ -8,33 +8,40 @@
 
 <ion-content mode="ios">
 
-  <ion-card class="welcome-card" id="card" >
-    <!-- <img src="/assets/scan.jpeg" alt="" /> -->
+  <input #fileinput type="file" accept="image/*;capture=camera" hidden 
+  (change)="handleFile($event.target.files)">
+
+  <ion-button expand="full" (click)="captureImage()" >
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Capture Image
+  </ion-button>
+
+  <ion-button expand="full" (click)="startScan()">
+    <ion-icon slot="start" name="qr-scanner"></ion-icon>
+    Start Scan
+  </ion-button>
+
+  <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh"></ion-icon>
+    Reset
+  </ion-button>
+
+  <video #video [hidden]="!scanActive" width="100%"></video>
+
+  <canvas #canvas hidden></canvas>
+
+  <ion-button expand="full" (click)="stopScan()" color="danger" *ngIf="scanActive">
+    <ion-icon slot="start" name="close"></ion-icon>
+    Stop Scan
+  </ion-button>
+
+  <ion-card *ngIf="scanResult">
     <ion-card-header>
-      <ion-card-title id="card"> QR Code </ion-card-title>
-      <!-- <ion-card-subtitle>Get Started</ion-card-subtitle> -->
+      <ion-card-title>QR Code Result</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Here we can scan a Qr code to get data.</p>
+      {{ scanResult }}
     </ion-card-content>
-    <ion-button expand='block' margin (click)="goToQrScan()" id="QRButton">Click to scan a QR Code!</ion-button>
-    <div *ngIf="scannedData">
-      <p>
-        Scanned Code Text : <b>{{ scannedData["text"] }}</b>
-      </p>
-      <p>
-        Scanned Code Format : <b>{{ scannedData["format"] }}</b>
-      </p>
-    </div>
   </ion-card>
-
-  <!-- <ion-card>
-    <h1>Enter Value to Create QR code</h1>
-    <ion-input type="text" [(ngModel)]="encodedData"></ion-input>
-
-    <ion-button (click)="goToCreateCode()">
-      Create QR
-    </ion-button>
-  </ion-card> -->
 
 </ion-content>
