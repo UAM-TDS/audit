@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
     <ion-title>Create User</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <app-user-form [contact]="emptyContact"></app-user-form>
+  <app-user-form [contact]="emptyContact" (save)="handleSave()"></app-user-form>
 </ion-content>

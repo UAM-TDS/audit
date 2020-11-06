@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Contact } from 'src/app/tab3/tab3.page';
 
 @Component({
@@ -9,9 +9,10 @@ import { Contact } from 'src/app/tab3/tab3.page';
 export class UserFormComponent implements OnInit {
 
  @Input() contact: Contact;
- 
+ @Output() save = new EventEmitter();
   constructor() { }
 
   ngOnInit() {}
 
+  
 }

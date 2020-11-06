@@ -11,12 +11,12 @@
 
     <ion-card-content class="content">
       <ion-item class="input">
-        <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+        <ion-input name="email"  type="email" placeholder="your@email.com" ngModel required></ion-input>
       </ion-item>
       <ion-item class="input">
         <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
       </ion-item>
-      <ion-button size="large" type="submit" routerLink="/tabs" expand="block">Login</ion-button>
+      <ion-button size="large" type="submit" routerLink="/tabs" expand="block" (click)="login()">Login</ion-button>
     </ion-card-content>
 
 

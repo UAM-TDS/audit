@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },
+  {
+    path: 'createcompany',
+    loadChildren: () => import('./createcompany/createcompany.module').then( m => m.CreatecompanyPageModule)
   }
 ];
 

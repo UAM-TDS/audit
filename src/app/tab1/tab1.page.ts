@@ -9,4 +9,7 @@ export class Tab1Page {
 
   constructor() {}
 
+  public havings = [
+    {id: '01', a_category:'dispositivos', a_type: 'computador', company: 'Security Company', location: 'Predio Sede - (Av. das pitangas, 123'}
+  ];
 }

@@ -14,12 +14,16 @@ export class CreatePage implements OnInit {
     role: '', 
     level: '', 
     username: ''
-  }
+  };
     
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleSave() {
+    console.log(this.emptyContact);
   }
 
 }

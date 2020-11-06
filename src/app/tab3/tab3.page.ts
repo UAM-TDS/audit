@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Company } from '../shared/company-form/company-form.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
 export interface Contact {
@@ -18,7 +19,14 @@ export interface Contact {
 })
 export class Tab3Page {
 
-  constructor(private modalController: ModalController) {}
+  constructor(private modalController: ModalController) {
+  }
+
+  public company: Company[] = [
+    {name: 'Security Company', email: 'security@company.com', phone: '12129948'},
+    {name: 'Food Company', email: 'food@company.com', phone: '12129948'},
+    {name: 'College', email: 'college@study.com', phone: '12129948'}
+  ];
 
   public contacts: Contact[] = [
     {name: 'Eduardo', email: 'edu@hotmail.com', phone: '11 234567890', role: 'Auditor', level: 'Level 3', username: 'orealdudao'},

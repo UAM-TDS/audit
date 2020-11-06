@@ -1,3 +1,31 @@
-<p>
- {{contact | json}}
-</p>
+<ion-list>
+    <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="contact.email"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.phone"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Cargo</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.role"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">SubCargo</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.level"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">GitHub User</ion-label>
+        <ion-input type="text" [(ngModel)]="contact.username"></ion-input>
+    </ion-item>
+</ion-list>
+
+<ion-button (click)="save.emit()" expand="block">
+    Salvar
+</ion-button>
+
