@@ -23,7 +23,7 @@ export class CreatePage implements OnInit {
   }
 
   handleSave() {
-    console.log(this.emptyContact);
+    console.log(this.emptyContact, 'Saving New Contact!');
   }
 
 }

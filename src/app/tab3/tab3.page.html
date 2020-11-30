@@ -47,60 +47,26 @@
 <ion-content mode="ios">
   <ion-router-outlet id="menu-content"></ion-router-outlet>
 
- <ion-list>
+  <ion-item *ngFor="let company of companys" (click)="openModal(company)">       
 
-   <ion-item> 
-      <ion-card mode="ios" class="company-profile" button>
-        <ion-avatar class="profile-pic">
-         <img class="logo" src="\assets\icon\audit.png" alt="Logo">
-        </ion-avatar>
-          
-        <h4><strong>Security Company</strong></h4>
-        <!-- <ion-item *ngFor="let comp of companys">
-          {{company.name}}
-        </ion-item> -->
-    
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </ion-card>
-   </ion-item>
-
-   <!-- <ion-item>
-      <ion-card mode="ios" class="company-profile" button>
-        <ion-avatar class="profile-pic">
-         <img class="logo" src="\assets\icon\audit.png" alt="Logo">
-        </ion-avatar>
-          
-        <ion-item *ngFor="let comp of companys">
-          <ion-label>{{company.name}}</ion-label>
+    <ion-card class="company-profile">
+      <ion-icon name="business-outline" id="icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-subtitle class="sub">Company Name</ion-card-subtitle>
+        <ion-card-title>{{company.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{company.title}}
+      </ion-card-content>
+    </ion-card>
         </ion-item>
-    
-         <h3><strong></strong></h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </ion-card>
-    </ion-item>
 
-      <ion-item>
-        <ion-card mode="ios" class="company-profile" button>
-          <ion-avatar class="profile-pic">
-           <img class="logo" src="\assets\icon\audit.png" alt="Logo">
-          </ion-avatar>
-            
-          <ion-item *ngFor="let comp of companys">
-            <ion-label>{{company.name}}</ion-label>
-          </ion-item>
-      
-           <h3><strong></strong></h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </ion-card>
-   </ion-item> -->
 
- </ion-list>
-
-<!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button routerLink="/createcompany">
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button routerLink='createcompany'>
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
-</ion-fab> -->
+</ion-fab>
 
 
 </ion-content>

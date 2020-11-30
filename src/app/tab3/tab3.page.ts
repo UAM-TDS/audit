@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Company } from '../shared/company-form/company-form.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserDetailsComponent } from './User/user-details/user-details.component';
+import { CompanyDetailsComponent } from './Company/company-details/company-details.component';
 
 export interface Contact {
   name: string;
@@ -10,6 +10,12 @@ export interface Contact {
   role: string;
   level: string;
   username: string;
+}
+export interface Company {
+  name: string;
+  email: string;
+  phone: string;
+  title: string;
 }
 
 @Component({
@@ -22,11 +28,22 @@ export class Tab3Page {
   constructor(private modalController: ModalController) {
   }
 
-  public company: Company[] = [
-    {name: 'Security Company', email: 'security@company.com', phone: '12129948'},
-    {name: 'Food Company', email: 'food@company.com', phone: '12129948'},
-    {name: 'College', email: 'college@study.com', phone: '12129948'}
+  public companys: Company[] = [
+    {name: 'Security Company', email: 'security@company.com', phone: '12129948', title: 'Work with security'},
+    {name: 'Food Company', email: 'food@company.com', phone: '12129948', title: 'We love all this FOOD'},
+    {name: 'College', email: 'college@study.com', phone: '12129948', title: 'Faculdade YouTube'}
   ];
+
+  public async openModal(company: Company){
+    console.log(company);
+    const modal = await this.modalController.create({
+      component: CompanyDetailsComponent,
+      componentProps: {
+        company: company,
+      }
+    });
+    modal.present();
+  }
 
   public contacts: Contact[] = [
     {name: 'Eduardo', email: 'edu@hotmail.com', phone: '11 234567890', role: 'Auditor', level: 'Level 3', username: 'orealdudao'},
@@ -38,7 +55,7 @@ export class Tab3Page {
     const modal = await this.modalController.create({
       component: UserDetailsComponent,
       componentProps: {
-        contact: contact
+        contact: contact,
       }
     });
     modal.present();

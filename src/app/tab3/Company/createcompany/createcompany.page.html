@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tab3"></ion-back-button>
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
     </ion-buttons>
     <ion-title>New Company</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <app-company-form [company]='newCompany' {formSubmitted}="handleFormSubmitted()"></app-company-form>
+  <app-company-form [company]='newCompany' (send)="handleSend()"></app-company-form>
 </ion-content>

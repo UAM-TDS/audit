@@ -1,6 +1,6 @@
 <ion-header mode="ios"> 
   <ion-toolbar>
-    <ion-title>Details</ion-title>
+    <ion-title>User Details</ion-title>
    <ion-buttons slot="end">
       <ion-button (click)="closeModal()">
        <ion-icon slot="icon-only" name="close"></ion-icon>
@@ -25,13 +25,13 @@
       <ion-card-content id="text-color">
         <ion-list>
           <ion-item>
-            <strong>Nome: </strong> {{ contact.name }}
+            <strong>Nome: &nbsp; </strong> {{ contact.name }}
           </ion-item>
           <ion-item>
-            <strong>Telefone: </strong> {{ contact.phone }}
+            <strong>Telefone: &nbsp; </strong> {{ contact.phone }}
           </ion-item>
           <ion-item>
-            <strong>E-mail: </strong> {{ contact.email }}
+            <strong>E-mail: &nbsp; </strong> {{ contact.email }}
           </ion-item>
         </ion-list>
 

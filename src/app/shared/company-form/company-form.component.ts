@@ -1,10 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
-export interface Company {
-  name: string,
-  email: string, 
-  phone: string
-};
+import { Company } from 'src/app/tab3/tab3.page';
 
 @Component({
   selector: 'app-company-form',
@@ -14,7 +9,7 @@ export interface Company {
 export class CompanyFormComponent implements OnInit {
 
   @Input() company: Company;
-  @Output() formSubmitted = new EventEmitter();
+  @Output() send = new EventEmitter();
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Contact } from '../tab3/tab3.page';
+import { Contact } from '../../tab3.page';
 
 @Component({
   selector: 'app-edit',
@@ -24,7 +24,7 @@ export class EditPage implements OnInit {
   }
 
   public handleSave() {
-    console.log(this.contact);
+    console.log(this.contact, "Editing Contact!");
   }
 
 }

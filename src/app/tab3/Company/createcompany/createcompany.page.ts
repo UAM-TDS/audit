@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Company } from 'src/app/shared/company-form/company-form.component';
 
 @Component({
   selector: 'app-createcompany',
@@ -8,10 +7,11 @@ import { Company } from 'src/app/shared/company-form/company-form.component';
 })
 export class CreatecompanyPage implements OnInit {
 
-  public newCompany: Company = {
+  public newCompany = {
     name: '',
     email: '', 
-    phone: ''
+    phone: '',
+    title: ''
   };
 
   constructor() { }
@@ -19,7 +19,7 @@ export class CreatecompanyPage implements OnInit {
   ngOnInit() {
   }
 
- public handleFormSubmitted() {
-    console.log(this.newCompany, 'Salvo!');
+ public handleSend() {
+    console.log(this.newCompany, 'Saving New Company!');
   }
 }

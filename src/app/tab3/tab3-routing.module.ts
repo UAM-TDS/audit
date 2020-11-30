@@ -9,8 +9,12 @@ const routes: Routes = [
   },
   {
     path: 'createcompany',
-    loadChildren: () => import('./createcompany/createcompany.module').then( m => m.CreatecompanyPageModule)
+    loadChildren: () => import('./Company/createcompany/createcompany.module').then( m => m.CreatecompanyPageModule)
+  },  {
+    path: 'edit-company',
+    loadChildren: () => import('./Company/edit-company/edit-company.module').then( m => m.EditCompanyPageModule)
   }
+
 ];
 
 @NgModule({

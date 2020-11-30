@@ -11,8 +11,12 @@
     <ion-label position="floating">Telefone:</ion-label>
     <ion-input type="text" [(ngModel)]="company.phone"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label position="floating">Title:</ion-label>
+    <ion-input type="text" [(ngModel)]="company.title"></ion-input>
+  </ion-item>
 </ion-list>
 
-<ion-button (click)="formSubimitted.emit()" expand="block">
+<ion-button (click)="send.emit()" expand="block">
   Salvar
 </ion-button>

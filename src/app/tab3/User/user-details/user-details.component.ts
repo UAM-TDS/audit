@@ -1,6 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Contact } from '../tab3.page';
+import { Contact } from '../../tab3.page';
 
 @Component({
   selector: 'app-user-details',

@@ -21,11 +21,11 @@ const routes: Routes = [
   },
   {
     path: 'edit',
-    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
+    loadChildren: () => import('./tab3/User/edit/edit.module').then( m => m.EditPageModule)
   },
   {
     path: 'create',
-    loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
+    loadChildren: () => import('./tab3/User/create/create.module').then( m => m.CreatePageModule)
   },
   
  
