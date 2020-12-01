@@ -12,6 +12,8 @@
 </ion-header>
 
 <ion-content mode="ios">
+
+
   <ion-item *ngFor="let having of havings" (click)="openModal(having)">
     <ion-row>
       <ion-col class="photo-cell" size="4" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
@@ -22,4 +24,5 @@
       </ion-col>
     </ion-row>
   </ion-item>
+  
 </ion-content>

@@ -1,4 +1,5 @@
 import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +15,7 @@ import { HavingsdetailComponent } from './Havings/havingsdetail/havingsdetail.co
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
+    RouterModule.forChild([{ path: '', component: Tab1Page }]),
     Tab1PageRoutingModule
   ],
   declarations: [Tab1Page, HavingsdetailComponent]

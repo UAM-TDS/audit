@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Having } from '../../tab1.page';
 
@@ -7,13 +7,14 @@ import { Having } from '../../tab1.page';
   templateUrl: './havingsdetail.component.html',
   styleUrls: ['./havingsdetail.component.scss'],
 })
-export class HavingsdetailComponent implements OnInit {
+export class HavingsdetailComponent {
 
   @Input() having: Having;
 
   constructor(private modalController: ModalController) { }
 
-  ngOnInit() {
+
+  closeModal() {
     this.modalController.dismiss();
   }
 

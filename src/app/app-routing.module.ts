@@ -35,7 +35,14 @@ const routes: Routes = [
     path: 'editcompany',
     loadChildren: () => import('./tab3/Company/editcompany/editcompany.module').then( m => m.EditcompanyPageModule)
   },
-  
+  {
+    path: 'createhavings',
+    loadChildren: () => import('./tab1/Havings/createhavings/createhavings.module').then( m => m.CreatehavingsPageModule)
+  },
+  {
+    path: 'edithavings',
+    loadChildren: () => import('./tab1/Havings/edithavings/edithavings.module').then( m => m.EdithavingsPageModule)
+  }
  
  
 ];

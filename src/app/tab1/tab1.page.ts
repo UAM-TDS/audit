@@ -34,7 +34,7 @@ export class Tab1Page {
     {id: '04', cat:'automoveis', type: 'moto', quanti: '2', medida: 'unudades', price: 'R$8,500.00', departament: 'espedicao', location: 'Predio Sede - (Av. das pitangas, 123'},
   ];
 
-  public async showModal(having: Having){
+  public async openModal(having: Having){
     console.log(having);
     const modal = await this.modalController.create({
       component: HavingsdetailComponent,
