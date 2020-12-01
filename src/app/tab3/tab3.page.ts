@@ -4,7 +4,7 @@ import { UserDetailsComponent } from './User/user-details/user-details.component
 import { CompanyDetailsComponent } from './Company/company-details/company-details.component';
 
 export interface Contact {
-  name: string;
+  nome: string;
   email: string;
   phone: string;
   role: string;
@@ -46,8 +46,8 @@ export class Tab3Page {
   }
 
   public contacts: Contact[] = [
-    {name: 'Eduardo', email: 'edu@hotmail.com', phone: '11 234567890', role: 'Auditor', level: 'Level 3', username: 'orealdudao'},
-    {name: 'Matheus', email: 'mat@hotmail.com', phone: '11 223344556', role: 'Auditor', level: 'Level 2', username: 'mathf'}
+    {nome: 'Eduardo', email: 'edu@hotmail.com', phone: '11 234567890', role: 'Auditor', level: 'Level 3', username: 'orealdudao'},
+    {nome: 'Matheus', email: 'mat@hotmail.com', phone: '11 223344556', role: 'Auditor', level: 'Level 2', username: 'mathf'}
   ];
 
   public async showModal(contact: Contact){

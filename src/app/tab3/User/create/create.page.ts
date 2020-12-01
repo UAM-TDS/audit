@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CreatePage implements OnInit {
 
   public emptyContact = {
-    name: '', 
+    nome: '', 
     email: '', 
     phone: '', 
     role: '', 

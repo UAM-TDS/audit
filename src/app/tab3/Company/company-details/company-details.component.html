@@ -11,17 +11,6 @@
 
 <ion-content mode="ios">
     <ion-card  mode="ios" >
-      <img [src]="'https://github.com/'+contact.username+'.png'" alt="">
-      <ion-card-header>
-        <ion-row>
-          <ion-col size="auto">
-            <ion-card-subtitle id="text-color">{{company.name}}</ion-card-subtitle>
-            <ion-card-subtitle id="text-color">{{company.title}}</ion-card-subtitle>
-            <ion-card-subtitle id="text-color">{{company.phone}}</ion-card-subtitle>
-          </ion-col>
-        </ion-row>
-
-      </ion-card-header>
       <ion-card-content id="text-color">
         <ion-list>
           <ion-item>
@@ -38,8 +27,12 @@
           </ion-item>
         </ion-list>
 
-        <ion-button expand="block" [routerLink]="['/edit', company.username]" (click)="closeModal()">
-          Editar
+        
+        <!-- <ion-button expand="block" [routerLink]="['/editcompany', company.name]" (click)="closeModal()">
+          Editar 
+        </ion-button> -->
+        <ion-button expand="block" [routerLink]="['editcompany', company.name]" (click)="closeModal()">
+          Editar 
         </ion-button>
         
       </ion-card-content>

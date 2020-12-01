@@ -6,6 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'createhavings',
+    loadChildren: () => import('./Havings/createhavings/createhavings.module').then( m => m.CreatehavingsPageModule)
+  },
+  {
+    path: 'edithavings',
+    loadChildren: () => import('./Havings/edithavings/edithavings.module').then( m => m.EdithavingsPageModule)
   }
 ];
 

@@ -7,13 +7,7 @@ const routes: Routes = [
     path: '',
     component: Tab3Page,
   },
-  {
-    path: 'createcompany',
-    loadChildren: () => import('./Company/createcompany/createcompany.module').then( m => m.CreatecompanyPageModule)
-  },  {
-    path: 'edit-company',
-    loadChildren: () => import('./Company/edit-company/edit-company.module').then( m => m.EditCompanyPageModule)
-  }
+
 
 ];
 

@@ -20,12 +20,20 @@ const routes: Routes = [
     pathMatch:"full"
   },
   {
-    path: 'edit',
+    path: 'edituser',
     loadChildren: () => import('./tab3/User/edit/edit.module').then( m => m.EditPageModule)
   },
   {
     path: 'create',
     loadChildren: () => import('./tab3/User/create/create.module').then( m => m.CreatePageModule)
+  }, 
+  {
+    path: 'createcompany',
+    loadChildren: () => import('./tab3/Company/createcompany/createcompany.module').then( m => m.CreatecompanyPageModule)
+  },
+  {
+    path: 'editcompany',
+    loadChildren: () => import('./tab3/Company/editcompany/editcompany.module').then( m => m.EditcompanyPageModule)
   },
   
  

@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Company } from '../../tab3.page';
 
 @Component({
-  selector: 'app-edit-company',
-  templateUrl: './edit-company.page.html',
-  styleUrls: ['./edit-company.page.scss'],
+  selector: 'app-editcompany',
+  templateUrl: './editcompany.page.html',
+  styleUrls: ['./editcompany.page.scss'],
 })
-export class EditCompanyPage implements OnInit {
+export class EditcompanyPage implements OnInit {
 
   public companys: Company[] = [
     {name: 'Security Company', email: 'security@company.com', phone: '12129948', title: 'Work with security'},
@@ -25,8 +25,7 @@ export class EditCompanyPage implements OnInit {
     this.company = this.companys.find(co => co.name === name);
   }
 
-  public handleSave() {
+  public handleSend() {
     console.log(this.company, "Editing Company!");
   }
-
 }

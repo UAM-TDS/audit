@@ -25,7 +25,7 @@
       <ion-card-content id="text-color">
         <ion-list>
           <ion-item>
-            <strong>Nome: &nbsp; </strong> {{ contact.name }}
+            <strong>Nome: &nbsp; </strong> {{ contact.nome }}
           </ion-item>
           <ion-item>
             <strong>Telefone: &nbsp; </strong> {{ contact.phone }}
@@ -35,7 +35,7 @@
           </ion-item>
         </ion-list>
 
-        <ion-button expand="block" [routerLink]="['/edit', contact.username]" (click)="closeModal()">
+        <ion-button expand="block" [routerLink]="['/edituser', contact.username]" (click)="closeModal()">
           Editar
         </ion-button>
         

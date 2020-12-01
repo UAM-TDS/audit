@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Having } from 'src/app/tab1/tab1.page';
 
 @Component({
   selector: 'app-havings-form',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HavingsFormComponent implements OnInit {
 
+  @Input() having: Having;
+  @Output() save = new EventEmitter();
   constructor() { }
 
   ngOnInit() {}

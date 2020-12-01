@@ -1,0 +1,48 @@
+<ion-header mode="ios"> 
+  <ion-toolbar>
+    <ion-title>Havings Details</ion-title>
+   <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+       <ion-icon slot="icon-only" name="close"></ion-icon>
+     </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+    <ion-card  mode="ios" >
+      <ion-card-content id="text-color">
+        <ion-list>
+          <ion-item>
+            <strong>ID:&nbsp; </strong> {{ having.id }}
+          </ion-item>
+          <ion-item>
+            <strong>Categoria:&nbsp; </strong> {{ having.cat }}
+          </ion-item>
+          <ion-item>
+            <strong>Tipo:&nbsp; </strong> {{ having.type }}
+          </ion-item>
+          <ion-item>
+            <strong>Valor:&nbsp; </strong> {{ having.quanti }}
+          </ion-item>
+          <ion-item>
+            <strong>Valor:&nbsp; </strong> {{ having.medida }}
+          </ion-item>
+          <ion-item>
+            <strong>Valor:&nbsp; </strong> {{ having.price }}
+          </ion-item>
+          <ion-item>
+            <strong>Departamento:&nbsp; </strong> {{ having.departament }}
+          </ion-item>
+          <ion-item>
+            <strong>Localizacao:&nbsp; </strong> {{ having.location }}
+          </ion-item>
+        </ion-list>
+
+        <ion-button expand="block" [routerLink]="['/edithavings', contact.username]" (click)="closeModal()">
+          Editar
+        </ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+</ion-content>

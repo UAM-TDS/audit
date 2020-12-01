@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHerf="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Edit Company New</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-company-form [company]="company" (send)="handleSend()"></app-company-form>
+</ion-content>
