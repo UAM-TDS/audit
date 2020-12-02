@@ -52,7 +52,7 @@ items: any;
   }
 
   getItems( ev: any ) {
-    this.inicializateItems;
+    this.inicializateItems();
     let val = ev.target.value;
     if (val && val.trim() != ''){
       this.items = this.items.filter((item) => {
