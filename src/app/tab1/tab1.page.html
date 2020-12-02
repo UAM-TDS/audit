@@ -19,7 +19,7 @@
   <ion-item *ngFor="let having of items" (click)="openModal(having)">
     
     <ion-card class="company-profile">
-      <ion-icon name="{{business-outline}}" id="icon"></ion-icon>
+      <ion-icon name="pricetags-outline" id="icon"></ion-icon>
       <ion-card-header>
         
         <ion-card-title>{{having.type}}</ion-card-title>
@@ -32,14 +32,11 @@
     </ion-card>
         </ion-item>
         
-        <!-- <ion-row>
-      <ion-col class="photo-cell" >
-        <ion-card>
-            <img [src]="'https://unsplash.com/photos-'+ having.url" alt="" >
-            {{having.id}}
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-item> -->
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/createhavings']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   
 </ion-content>
