@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from  "@angular/router";
-// import { AuthService } from '../auth.service';
+import { Router } from "@angular/router";
+
+import { StorageService } from '../Services/storage.service';
+
+
 
 @Component({
   selector: 'app-register',
@@ -8,16 +11,23 @@ import { Router } from  "@angular/router";
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
- // authService: any;
 
-  //constructor(private  authService:  AuthService, private  router:  Router) { }
-  constructor(private  router:  Router) { }
+  name: string;
+  email: string;
+  password: string;
+
+  constructor(private router: Router, private service: StorageService) { }
   ngOnInit() {
   }
 
-  // register(form) {
-  //   this.authService.register(form.value).subscribe((res) => {
-  //     this.router.navigateByUrl('tab3');
-  //  });
-  // }
+ 
+
+  register() {
+    const user = { email: this.email, name : this.name, password: this.password};
+    this.service.create(user);
+    this.router.navigateByUrl('tab2');
+  }
+
+
+
 }

@@ -10,7 +10,7 @@
     </div>
 
     <ion-card-content class="content">
-      <form  #form="ngForm" (ngSubmit)="register(form)">
+      <form  #form="ngForm" (ngSubmit)="register()">
         <ion-item class="input">
           <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
         </ion-item>
@@ -21,9 +21,9 @@
           <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
         </ion-item>
         <ion-item class="input">
-          <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
+          <ion-input name="confirm" type="password" placeholder="Password again"  required></ion-input>
         </ion-item>
-        <ion-button  size="large" type="submit"  routerLink="/tabs" expand="block">Register</ion-button>
+        <ion-button  size="large" type="submit"  expand="block">Register</ion-button>
         <!-- [disabled]="form.invalid" -->
       </form>
     </ion-card-content>

@@ -47,7 +47,7 @@ export class Tab3Page {
 
   public contacts: Contact[] = [
     {nome: 'Eduardo', email: 'edu@hotmail.com', phone: '11 234567890', role: 'Auditor', level: 'Level 3', username: 'orealdudao'},
-    {nome: 'Matheus', email: 'mat@hotmail.com', phone: '11 223344556', role: 'Auditor', level: 'Level 2', username: 'mathf'}
+    {nome: 'Matheus', email: 'mat@hotmail.com', phone: '11 223344556', role: 'Auditor', level: 'Level 2', username: 'Matheussoares2025'}
   ];
 
   public async showModal(contact: Contact){
