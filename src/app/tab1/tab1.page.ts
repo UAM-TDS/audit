@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import * as _ from 'lodash';
 import { HavingsdetailComponent } from './Havings/havingsdetail/havingsdetail.component';
 
 
 export interface Having {
+  
   id: string;
   cat: string;
   type: string;
@@ -21,9 +23,10 @@ export interface Having {
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+items: any;
 
   constructor(private modalController: ModalController) {
-
+    this.inicializateItems();
    }
 
   public havings: Having[] = [
@@ -43,5 +46,20 @@ export class Tab1Page {
     });
     modal.present();
   }
+
+  inicializateItems(){
+    this.items = this.havings;
+  }
+
+  getItems( ev: any ) {
+    this.inicializateItems;
+    let val = ev.target.value;
+    if (val && val.trim() != ''){
+      this.items = this.items.filter((item) => {
+        return (item.type.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+
 }
 

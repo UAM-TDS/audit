@@ -11,14 +11,17 @@ import { AppComponent } from './app.component';
 
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,
     QRScanner, 
+
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     
   ],

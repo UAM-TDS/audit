@@ -8,7 +8,7 @@
 
   <ion-toolbar>
     <ion-searchbar mode="ios" placeholder="Search Havings" type="text"   color="primary" 
-     [(ngModel)]="busca" (ionInput)="filter($event)" clearInput></ion-searchbar>
+      (ionInput)="getItems($event)" ></ion-searchbar>
      <!-- cancel-button-text -->
   </ion-toolbar>
 </ion-header>
@@ -16,16 +16,18 @@
 <ion-content mode="ios">
 
 
-  <ion-item *ngFor="let having of havings" (click)="openModal(having)">
+  <ion-item *ngFor="let having of items" (click)="openModal(having)">
     
     <ion-card class="company-profile">
       <ion-icon name="{{business-outline}}" id="icon"></ion-icon>
       <ion-card-header>
-        <ion-card-subtitle class="sub"></ion-card-subtitle>
-        <ion-card-title>{{having.id}}</ion-card-title>
+        
+        <ion-card-title>{{having.type}}</ion-card-title>
+        
       </ion-card-header>
       <ion-card-content>
-        {{having.type}}
+        <ion-card-subtitle class="sub">{{having.departament}}</ion-card-subtitle>
+        {{having.cat}}
       </ion-card-content>
     </ion-card>
         </ion-item>
